@@ -1,6 +1,7 @@
 // requiring modules 
 const express = require('express')
 const ejs = require('ejs')
+const cookieParser = require('cookie-parser')
 
 
 // middlewares 
@@ -11,7 +12,7 @@ app.use(express.raw())
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
-
+app.use(cookieParser())
 
 // ====== 
 
